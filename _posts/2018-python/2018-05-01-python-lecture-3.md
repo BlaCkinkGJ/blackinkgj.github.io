@@ -40,16 +40,23 @@ acc_above = 0
 lower_limit = 0
 higher_limit = 1
 
+max_height = 0
+min_height = float("inf")
+
 iter = 10000
 for i in xrange(iter):
     x = random.uniform(lower_limit, higher_limit)
     exp_y = x
+    max_height = max([exp_y, max_height])
+    min_height = min([exp_y, min_height])
     y = random.uniform(lower_limit, higher_limit)
     
     if(y <= exp_y) : acc_below += 1
     else           : acc_above += 1
 
-print acc_below/float(iter)
+width = higher_limit-lower_limit
+height = max_height - min_height
+print width * height *(acc_below/float(iter))
 ```
 
 이것의 역할을 위의 코드로는 직관적으로 이해하기 어렵습니다. 다음으로 함수를 사용한 코드를 보도록 하겠습니다.
@@ -62,16 +69,24 @@ def my_func(x): return x
 def integral(lower_limit, higher_limit, function):
     acc_below = 0
     acc_above = 0
+    
+    max_height = 0
+    min_height = float("inf")
+    
     iter = 1000
     for i in xrange(iter):
         x = random.uniform(lower_limit, higher_limit)
         exp_y = function(x)
+        max_height = max([exp_y, max_height])
+        min_height = min([exp_y, min_height])
         y = random.uniform(lower_limit, higher_limit)
-    
+        
         if(y <= exp_y) : acc_below += 1
         else           : acc_above += 1
         
-    return acc_below/float(iter)
+    width = higher_limit-lower_limit
+    height = max_height - min_height
+    return width * height *(acc_below/float(iter))
 
 print integral(0, 1, my_func)
 ```
@@ -89,36 +104,50 @@ acc_below = 0
 acc_above = 0
 
 lower_limit = 0
-higher_limit = 2 # 1 -> 2 수정됨
+higher_limit = 2 # 수정
+
+max_height = 0
+min_height = float("inf")
 
 iter = 10000
 for i in xrange(iter):
     x = random.uniform(lower_limit, higher_limit)
     exp_y = x
+    max_height = max([exp_y, max_height])
+    min_height = min([exp_y, min_height])
     y = random.uniform(lower_limit, higher_limit)
     
     if(y <= exp_y) : acc_below += 1
     else           : acc_above += 1
 
-print acc_below/float(iter)
+width = higher_limit-lower_limit
+height = max_height - min_height
+print width * height *(acc_below/float(iter))
 
 
-acc_below_boss = 0 # boss로 수정됨
-acc_above_boss = 0 # boss로 수정됨
+acc_below_boss = 0 # 수정
+acc_above_boss = 0 # 수정
 
-lower_limit_boss = 0 # boss로 수정됨
-higher_limit_boss = 2 # 1 -> 2 수정됨, boss로 수정됨
+lower_limit_boss = 0 # 수정
+higher_limit_boss = 2 # 수정
 
-iter_boss = 10000
+max_height_boss = 0 # 수정
+min_height_boss = float("inf") # 수정
+
+iter = 10000
 for i in xrange(iter):
-    x = random.uniform(lower_limit, higher_limit)
-    exp_y = x + 1 # x -> x + 1이 됨
-    y = random.uniform(lower_limit, higher_limit)
+    x = random.uniform(lower_limit_boss, higher_limit_boss) # 수정
+    exp_y = x + 1 # 수정
+    max_height_boss = max([exp_y, max_height_boss]) # 수정
+    min_height_boss = min([exp_y, min_height_boss]) # 수정
+    y = random.uniform(lower_limit_boss, higher_limit_boss) # 수정
     
-    if(y <= exp_y) : acc_below_boss += 1 # boss로 수정됨
-    else           : acc_above_boss += 1 # boss로 수정됨
+    if(y <= exp_y) : acc_below_boss += 1 # 수정
+    else           : acc_above_boss += 1 # 수정
 
-print acc_below_boss/float(iter_boss)
+width_boss = higher_limit_boss-lower_limit_boss # 수정
+height_boss = max_height_boss - min_height_boss # 수정
+print width_boss * height_boss *(acc_below_boss/float(iter)) # 수정
 ```
 
 정말 어렵고 이상한 코드가 완성됩니다. 하지만 아래와 같이 함수로 만든 경우 코드의 밑에 아래와 같이 추가 및 수정하면 작업은 끝나게 됩니다.
@@ -131,16 +160,24 @@ def my_func(x): return x
 def integral(lower_limit, higher_limit, function):
     acc_below = 0
     acc_above = 0
+    
+    max_height = 0
+    min_height = float("inf")
+    
     iter = 1000
     for i in xrange(iter):
         x = random.uniform(lower_limit, higher_limit)
         exp_y = function(x)
+        max_height = max([exp_y, max_height])
+        min_height = min([exp_y, min_height])
         y = random.uniform(lower_limit, higher_limit)
-    
+        
         if(y <= exp_y) : acc_below += 1
         else           : acc_above += 1
         
-    return acc_below/float(iter)
+    width = higher_limit-lower_limit
+    height = max_height - min_height
+    return width * height *(acc_below/float(iter))
 
 print integral(0, 2, my_func) # 1 -> 2로 수정됨
 
@@ -169,7 +206,7 @@ def function(parameter):
     return something
 ```
 
-한 번 구조를 차근차근 분석해보도록 하겠습니다. 먼저 `def`라는 키워드는 `define`의 줄임말로 '어떠한 함수를 정의하길...' 이라고 이해하시면 됩니다. 이런 키워드는 모든 함수에서 다 사용됩니다. 이것은 개발자 간의 약속이라고 생각 하시면 됩니다. 다음으로 `parameter` 의 경우 여기에는 함수의 인자가 될 것들이 들어가면 됩니다. 수학에서도 $$f(x, y) = x^2 + y^2$$과도 같은 방식으로 함수를 정의할 수 있듯이, 이 매개변수는 원하는 만큼의 변수를 넣을 수 있습니다. 함수에서 사용될 외부의 값들이 다 들어간다고 생각하시면 됩니다. 그리고 `...`에는 함수가 무슨 역할을 하는 지를 작성하시면 되고, `return something`은 함수에서 계산된 `something` 값을 반환을 합니다. 그런데 `parameter`와 `return`에서 주의할만한 독특한 특징이 있습니다. 저 `return`과 `parameter`는 **없어도 정상적으로 작동합니다.** 심지어 한술 더 떠서 `return`은 **자기 자신을 반환**을 할 수 있습니다. 전자는 그래도 대충 느낌이라도 오는 데 후자는 느낌도 잘 안 올 겁니다. 자세히 뭔 소리인지는 뒤에 응용에서 보도록 하겠습니다. 
+한 번 구조를 차근차근 분석해보도록 하겠습니다. 먼저 `def`라는 키워드는 `define`의 줄임말로 '어떠한 함수를 정의하길...' 이라고 이해하시면 됩니다. 이런 키워드는 모든 함수에서 다 사용됩니다. 이것은 개발자 간의 약속이라고 생각 하시면 됩니다. 그리고 `function`에서는 함수의 이름을 결정해주도록 합니다. 다음으로 `parameter` 의 경우 여기에는 함수의 인자가 될 것들이 들어가면 됩니다. 수학에서도 $$f(x, y) = x^2 + y^2$$과도 같은 방식으로 함수를 정의할 수 있듯이, 이 매개변수는 원하는 만큼의 변수를 넣을 수 있습니다. 함수에서 사용될 외부의 값들이 다 들어간다고 생각하시면 됩니다. 그리고 `...`에는 함수가 무슨 역할을 하는 지를 작성하시면 되고, `return something`은 함수에서 계산된 `something` 값을 반환을 합니다. 그런데 `parameter`와 `return`에서 주의할만한 독특한 특징이 있습니다. 저 `return`과 `parameter`는 **없어도 정상적으로 작동합니다.** 심지어 한술 더 떠서 `return`은 **자기 자신을 반환**을 할 수 있습니다. 전자는 그래도 대충 느낌이라도 오는 데 후자는 느낌도 잘 안 올 겁니다. 자세히 뭔 소리인지는 뒤에 응용에서 보도록 하겠습니다. 
 
 먼저 앞에서 이야기한 독특한 특징도 더해서 함수를 작성해서 이해를 해보도록 합시다. 함수의 사용으로 아래와 같은 예가 있을 수 있습니다.
 
