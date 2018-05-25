@@ -5,6 +5,7 @@ date: 2018-3-27
 excerpt: "파이썬의 함수를 사용해보도록 한다."
 tag:
 - python
+comments: true
 ---
 
 ## 오늘 배울 내용

@@ -5,6 +5,7 @@ date: 2018-5-26
 excerpt: "for문으로 2차원 리스트의 효율적인 접근 방법"
 tag:
 - python
+comments: true
 ---
 # 2차원 배열의 for문 접근
 

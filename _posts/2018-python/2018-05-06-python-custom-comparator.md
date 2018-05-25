@@ -5,6 +5,7 @@ date: 2018-5-6
 excerpt: "2개 이상의 원소를 비교 및 정렬하도록 한다."
 tag:
 - python
+comments: true
 ---
 # 2개 이상의 원소 내용에 대한 정렬 방법
 
