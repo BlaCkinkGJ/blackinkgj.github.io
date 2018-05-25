@@ -1,13 +1,14 @@
 ---
 layout: post
 title:  "프로젝트 현황"
-date:   2018-04-29 02:34:29 +0900
+date:   2018-05-26
 project: true
 tag:
 - project status
 comments: false
 ---
-최종 수정 일 : 2018-04-30
+최종 수정 일 : 토요일, 26. 5월 2018 01:22오전 
+
 
 ## 종료된 프로젝트
 
@@ -17,3 +18,4 @@ comments: false
 ## 진행 중인 프로젝트
 
 * No Waiting 어플 제작 프로젝트(2018. 3. ~ 현재)
+* SF(Safety First) 안전모 제작 프로젝트(2018. 5. ~ 현재)
