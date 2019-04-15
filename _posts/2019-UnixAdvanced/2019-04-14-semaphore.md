@@ -143,7 +143,7 @@ sem_t* sem_open(const char *name, int oflag, /*optional*/ mode_t mode , /*option
 
 이런 구성을 가지는 이유는 이름이 있는 세마포어는 파일로 만들어지기 때문입니다. 만약 `O_CREAT | O_EXCL`이 `oflag`에 들어간다면 세마포어가 존재하면 오류를 반환(`O_EXCL`)하고,  그렇지 않으면 생성(`O_CREAT`)하도록 합니다. 그리고 `mode`와 `value`는 `O_CREAT`가 특정되는 경우 줘야할 것으로, `mode`는 파일을 여는 방식을 설정을 하고  `value` 값은 새로운 세마포어의 값을 지정합니다. 하지만 만약 `O_CREAT`이 설정이 되었는데, 지금 부여하는 이름을 가진 세마포어가 이미 존재하면 `mode`와 `value`는 무시되게 됩니다.
 
-다음으로 `int sem_unlink(const char *name)`가 있습니다. 이는 이름이 있는 세마포어를 삭제하는 데 사용을 합니다.
+다음으로 `int sem_unlink(const char *name)`가 있습니다. 이는 이름이 있는 세마포어를 삭제하는 데 사용을 합니다. 단, 만약 어떤 프로세스가 참조하는 경우에 해당 프로세스가 `sem_close(sem_t *sem)`나 `_exit()`을 부를 때까지 <u>제거는 연기</u>가 되게 됩니다.
 
 이러한 POSIX 세마포어에서 **P 연산**에 해당하는 명령어로는 아래와 같습니다.
 
