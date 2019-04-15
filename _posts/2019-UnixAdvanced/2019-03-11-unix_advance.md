@@ -15,7 +15,7 @@ comments: true
 
 ![UNIX STRUCT](/assets/img/res/2019-UnixAdvanced/1/UnixStruct.PNG)
 
-그리고 이러한 구조는 크게 'system-call interfacae to the kernel' 위의 공간에 해당하는 사용자 주소 공간(user address space)에 해당하는 부분과 밑의 공간에 해당하는 커널 주소 공간(kernel address space)으로 이루어집니다.
+그리고 이러한 구조는 크게 'system-call interface to the kernel' 위의 공간에 해당하는 사용자 주소 공간(user address space)에 해당하는 부분과 밑의 공간에 해당하는 커널 주소 공간(kernel address space)으로 이루어집니다.
 
 여기서 가장 괄목할만한 것은 'kernel interface to the HW '부분으로 이는 API 또는 function들을 의미하며 다른 말로는 **<u>HAL(Hardware Abstraction Layer)</u>**라고 합니다. 여기서 abstraction은 common thing이라고도 쓰입니다. 이러한 abstraction은 내부의 구현을 감추고 인터페이스만을 제공하는 것이라고 할 수 있습니다.
 
