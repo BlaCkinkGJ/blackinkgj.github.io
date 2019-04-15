@@ -12,7 +12,7 @@ comments: true
 
 쓰레드<sub>thread</sub>를 사용하는 환경에서는 뮤텍스<sub>mutex</sub>만으로 문제를 해결할 수 있을 것입니다. 하지만 만약 IPC를 사용하는 경우에는 뮤텍스의 사용은 꽤나 곤란할 것입니다. 왜냐하면 **뮤텍스**는 공유된 자원의 데이터를 <u>여러 쓰레드가 접근</u>하는 것을 막는 것이기 때문입니다.
 
-따라서 공유된 자원의 데이터를 <u>여러 프로세스</u>가 접근하는 것을 막는 것을 만들 필요가 있었고, 그러한 요구로 만들어진 것이 **세마포어<sub>semaphore</sub>**입니다. 세마포어는 이 [게시물](https://blackinkgj.github.io/Semaphore/)에서는 잘 나와있지만 원래 깃발로 신호를 표현하는 방법에 해당합니다. 
+따라서 공유된 자원의 데이터를 <u>여러 프로세스</u>가 접근하는 것을 막는 것을 만들 필요가 있었고, 그러한 요구로 만들어진 것이 **세마포어<sub>semaphore</sub>**입니다. 세마포어는 이 [게시물](https://blackinkgj.github.io/Semaphore/)에서는 잘 나와 있지만 원래 깃발로 신호를 표현하는 방법에 해당합니다. 
 
 이런 세마포어에서 주요 용어로는 **P, V 명령**이 있고, 이들은 원자적으로 실행됩니다. 그리고 각각의 정의는 아래와 같습니다.
 
@@ -141,7 +141,7 @@ int main (int argc, char **argv){
 sem_t* sem_open(const char *name, int oflag, /*optional*/ mode_t mode , /*optional*/ unsigned int value);
 ```
 
-이런 구성을 가지는 이유는 이름이 있는 세마포어는 파일로 만들어지기 때문입니다. 만약 `O_CREAT | O_EXCL`이 `oflag`에 들어간다면 세마포어가 존재하면 에러를 반환(`O_EXCL`)하고,  그렇지 않으면 생성(`O_CREAT`)하도록 합니다. 그리고 `mode`와 `value`는 `O_CREAT`가 특정되는 경우 줘야할 것으로, `mode`는 파일을 여는 방식을 설정을 하고  `value` 값은 새로운 세마포어의 값을 지정합니다. 하지만 만약 `O_CREAT`이 설정이 되었는 데, 지금 부여하는 이름을 가진 세마포어가 이미 존재하면 `mode`와 `value`는 무시되게 됩니다.
+이런 구성을 가지는 이유는 이름이 있는 세마포어는 파일로 만들어지기 때문입니다. 만약 `O_CREAT | O_EXCL`이 `oflag`에 들어간다면 세마포어가 존재하면 오류를 반환(`O_EXCL`)하고,  그렇지 않으면 생성(`O_CREAT`)하도록 합니다. 그리고 `mode`와 `value`는 `O_CREAT`가 특정되는 경우 줘야할 것으로, `mode`는 파일을 여는 방식을 설정을 하고  `value` 값은 새로운 세마포어의 값을 지정합니다. 하지만 만약 `O_CREAT`이 설정이 되었는데, 지금 부여하는 이름을 가진 세마포어가 이미 존재하면 `mode`와 `value`는 무시되게 됩니다.
 
 다음으로 `int sem_unlink(const char *name)`가 있습니다. 이는 이름이 있는 세마포어를 삭제하는 데 사용을 합니다.
 
@@ -153,13 +153,13 @@ sem_trywait(sem_t *sem);
 sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);
 ```
 
-`sem_wait`는 만약 세마포어 값이 0보다 작으면 대기를 하도록 합니다. 이에 반해, `sem_trywait`는 세마포어 값이 0보다 작으면 획득을 못했다는 에러를 띄우면서 대기를 하지 않고 빠져나옵니다. 마지막으로 `sem_timewait`는 대기 상태에 들어간 후에 `abs_timeout` 안에 획득을 하지 못하면 에러를 띄웁니다. 세마포어를 반환하는 **V 연산**은 `sem_post(sem_t *sem)`를 통해서 해줍니다.
+`sem_wait`는 만약 세마포어 값이 0보다 작으면 대기를 하도록 합니다. 이에 반해, `sem_trywait`는 세마포어 값이 0보다 작으면 획득을 못했다는 오류를 띄우면서 대기를 하지 않고 빠져나옵니다. 마지막으로 `sem_timewait`는 대기 상태에 들어간 후에 `abs_timeout` 안에 획득을 하지 못하면 오류를 띄웁니다. 세마포어를 반환하는 **V 연산**은 `sem_post(sem_t *sem)`를 통해서 해줍니다.
 
 그리고 이러한 세마포어를 다 사용한 경우에는 **이름이 있는 세마포어**는 `sem_close(sem_t *sem);`를 **익명 세마포어**는 `sem_destroy(sem_t *sem);`을 사용해주시길 바랍니다.
 
 ## SystemV
 
-이번 버전은 `sys/types.h, sys/ipc.h, sys/sem.h`를 넣어 사용합니다. 이는 POSIX와 사용은 비슷하나 좀 더 복잡합니다. 아래의 주석을 잘 따라가주시길 바랍니다.
+이번 버전은 `sys/types.h, sys/ipc.h, sys/sem.h`를 넣어 사용합니다. 이는 POSIX와 사용은 비슷하나 좀 더 복잡합니다. 아래의 주석을 잘 따라가 주시길 바랍니다.
 
 ```c
 #ifndef __SYS_V_SEM__
