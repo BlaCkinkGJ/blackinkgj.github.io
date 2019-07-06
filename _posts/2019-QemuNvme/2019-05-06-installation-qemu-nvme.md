@@ -72,8 +72,6 @@ sudo qemu-system-x86_64 -hda ubuntu.img -boot d -cdrom ubuntu-18.04.2-desktop-am
 
 그리고 호스트 우분투에 기본적으로 깔려있는 [리미너](https://remmina.org/)를 실행을 해주도록 합니다. 다음에 VNC로 설정을 한 후에 `:2`를 입력해주도록 합니다.
 
-![readyToRun](readyToRun.png)
-
 그러면 우분투 설치 과정이 나오게 됩니다. 설치 과정은 [이 게시글](https://blog.inidog.com/p/201809161770)을 참고해주시면 됩니다. 근데 디스크 할당을 할 때 기타로 저렇게 할당을 해주어도 되지만 그냥 *디스크를 지우고 Ubuntu* 설치를 해도 큰 문제는 없습니다.
 
 설치가 될 때까지 기다려 주시길 바랍니다. 설치가 되었으면 아래의 명령어를 치고 다시 리미너로 들어가도록 해주시길 바랍니다.
@@ -143,7 +141,7 @@ sudo qemu-system-x86_64 \
 nvme command tool인 nvme-cli를 설치해보도록 하겠습니다. 먼저 **virtual machine**에서 다음의 명령을 쳐주시길 바랍니다.
 
 ```bash
-sudo apt install git, make, gcc
+sudo apt install git make gcc
 git clone https://github.com/linux-nvme/nvme-cli
 cd nvme-cli
 make -j '# of core'
@@ -156,7 +154,7 @@ sudo make install
 sudo nvme lnvm list
 ```
 
-그랬는 경우에 아래와 같은 화면이 나타나야 합니다.
+이 명령을 치면 아래와 같은 화면이 나타나야 합니다.
 
 ```bash
 Number of devices: 1
@@ -164,7 +162,7 @@ Device      	Block manager	Version
 nvme0n1     	gennvm      	(1,0,0)
 ```
 
-이 다음에 아래의 명령을 차례로 수행하도록 합니다.
+다음에 아래의 명령을 차례로 수행하도록 합니다.
 
 ```bash
 sudo nvme lnvm init -d nvme0n1
@@ -172,7 +170,7 @@ sudo nvme lnvm create -d nvme0n1 -n mydevice -t pblk -b 0 -e 3
 sudo mkfs.ext4 /dev/mydevice
 sudo mkdir /mnt/nvme
 sudo mount /dev/mydevice /mnt/nvme
-sudo chown kijunking:kijunking /mnt/nvme
+sudo chown username:username /mnt/nvme
 ```
 
 이를 통해서 nvme는 설정할 수 있습니다.
