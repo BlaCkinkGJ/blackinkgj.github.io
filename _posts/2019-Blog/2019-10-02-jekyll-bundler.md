@@ -27,7 +27,7 @@ Jekyll 기반 블로그를 만들어놓고 다른 컴퓨터에서 포스팅을 �
 
 그러면 'MSYS 관련 설치를 할 것인가?'에 관해서 나올 것입니다.
 
-![msys](assets/img/res/2019-Blog/msys.PNG)
+![msys](/assets/img/res/2019-Blog/msys.PNG)
 
 이때, 체크 박스에 체크를 하고 Finish를 눌러 주시면 됩니다. 그러면 아래와 같은 창이 뜰 것입니다.
 
