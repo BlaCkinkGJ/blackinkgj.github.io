@@ -8,7 +8,7 @@ tag:
 - project status
 comments: false
 ---
-최종 수정 일 : 오후 2:22 2019-04-12
+최종 수정 일 : 오후 3:33 2019-11-12
 
 
 ## 종료된 프로젝트
@@ -23,6 +23,7 @@ comments: false
 
 ## 진행 중인 프로젝트
 
-- [Open-channel SSD에 기반한 D-FTL개발](https://github.com/central-engineering-organization/linux)(2019. 4. ~)
-- [AtMega128 + FreeRTOS를 기반으로 한 개발 문서 제작 프로젝트](https://github.com/BlaCkinkGJ/Atmega128-SimpleProject-FreeRTOS)(2019. 7. ~)
+- [OCSSD 기반 페이지-레벨 매핑 FTL 구현 프로젝트](https://github.com/central-engineering-organization/linux)(2019. 4. ~)
+- [ATMega128 + FreeRTOS를 기반으로 한 개발 문서 제작 프로젝트](https://github.com/BlaCkinkGJ/Atmega128-SimpleProject-FreeRTOS)(2019. 7. ~)
+- [OCF 표준 기반 건물 화재 대피 유도 시스템](https://github.com/2nd-Chance/Fire-evacuation-guidance-system-IoT)(2019. 9. ~)
 
