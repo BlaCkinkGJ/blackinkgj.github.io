@@ -18,7 +18,7 @@ Redis(REmote DIctionary System)는 BSD 라이선스를 기반으로 하는 오�
 
 ## Redis의 설치
 
-Redis를 사용하기 위해 package 매니저로 다운을 받는 방법도 있지만, 본 글에서는 소스 코드를 통해서 받는 방법을 설명하도록 한다. 만약 본인이 WSL(Windows Subsystem for Linux)에서 redis를 돌리고자 한다면 [이 글]( https://medium.com/@RedisLabs/windows-subsystem-for-linux-wsl-10e3ca4d434e )을 참고 해주길 바란다.
+Redis를 사용하기 위해 package 매니저로 다운을 받는 방법도 있지만, 본 글에서는 소스 코드를 통해서 받는 방법을 설명하도록 한다. 만약 본인이 WSL(Windows Subsystem for Linux)에서 redis를 돌리고자 한다면 [이 글]( https://medium.com/@RedisLabs/windows-subsystem-for-linux-wsl-10e3ca4d434e )을 참고 바란다.
 
 ```bash
 wget http://download.redis.io/redis-stable.tar.gz
