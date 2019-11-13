@@ -25,7 +25,7 @@ wget http://download.redis.io/redis-stable.tar.gz
 tar xvzf redis-stable.tar.gz
 ```
 
-여기까지 했다면, 이제는 빌드를 해야 합니다.
+여기까지 했다면, 이제는 빌드를 해야 합니다. 이때, `5.0.4 Build fail : undefined reference to __atomic_fetch_add_8`라는 문제가 뜨는 경우가 발생하는 경우에는 `redis-stable/src`에 들어가서 `Makefile`에서 `FINAL_LIBS=-lm`을 `FINAL_LIBS=-lm -latomic`으로 변경해주시길 바랍니다.
 
 ```bash
 sudo apt install tcl tk
