@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[uftrace] uftrace의 tui를 사용해보도록 하자."
-date: 2019-12-23
+date: 2019-12-24
 excerpt: "uftrace의 tui를 사용해보도록 하자"
 tag:
 - uftrace
