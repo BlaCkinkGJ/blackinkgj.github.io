@@ -57,7 +57,7 @@ sudo apt install -y dh-autoreconf
 
 이를 `sudo uftrace record -a -k ./htops`를 하면 커널 내부 함수도 후킹을 할 수 있으며, `uftrace tui -t 1us`을 하면 좀 더 세밀하게 그 내용을 확인할 수 있으며, `c`와 같은 커맨드를 활용해서 기존의 replay와 달리 좀 더 컴팩트한 결과를 보고, 코드 분석에 사용할 수 있습니다.
 
-## 예정 작성 자료
+## 다음 글
 
-1. uftrace를 사용한 시각화
-2. 기존 바이너리인 `fio` tracing
+1. [[uftrace] uftrace를 사용한 시각화](https://blackinkgj.github.io/uftrace-visualization/)
+2. [[uftrace] 기존 바이너리 fio 트레이싱](https://blackinkgj.github.io/uftrace-fio/)

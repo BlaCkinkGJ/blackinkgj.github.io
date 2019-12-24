@@ -116,9 +116,9 @@ uftrace dump --flame-graph | ./flamegraph.pl > hanoi.svg
 
 그리고 `svg`는 interactive하므로 원하는 내용에 커서를 올리면 해당하는 코드의 스택 프레임을 확인할 수 있습니다. **추가로, flamegraph는 `chrome://tracing`과 달리 시간 순서가 아니라 얼마나 많이 호출되어 있는가가 중점인 특징이 있습니다.**
 
-## 예정 작성 자료
+## 다음 글
 
-2. 기존 바이너리인 `fio` tracing
+1. [[uftrace] 기존 바이너리 fio 트레이싱](https://blackinkgj.github.io/uftrace-fio/)
 
 
 

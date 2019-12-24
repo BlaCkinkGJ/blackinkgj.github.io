@@ -347,11 +347,11 @@ Total time은 서브루틴에서 걸린 시간을 합친 시간이고, Self time
 
 만약 각각 항목에 따라서 정렬을 하고 싶은 경우에는 `-s total`, `-s self`, `-s call`을 `uftrace report`의 옵션으로 넣어주면 됩니다.
 
-## 예정 작성 자료
+## 다음 글
 
-1. uftrace tui 사용법
-2. uftrace를 사용한 시각화
-3. 기존 바이너리인 `fio` tracing
+1. [[uftrace] uftrace의 tui를 사용해보도록 하자.](https://blackinkgj.github.io/uftrace-tui/)
+2. [[uftrace] uftrace를 사용한 시각화](https://blackinkgj.github.io/uftrace-visualization/)
+3. [[uftrace] 기존 바이너리 fio 트레이싱](https://blackinkgj.github.io/uftrace-fio/)
 
 
 출처
