@@ -74,7 +74,7 @@ sudo qemu-system-x86_64 -hda ubuntu.img -boot d -cdrom ubuntu-18.04.2-desktop-am
 
 그러면 우분투 설치 과정이 나오게 됩니다. 설치 과정은 [이 게시글](https://blog.inidog.com/p/201809161770)을 참고해주시면 됩니다. 근데 디스크 할당을 할 때 기타로 저렇게 할당을 해주어도 되지만 그냥 *디스크를 지우고 Ubuntu* 설치를 해도 큰 문제는 없습니다.
 
-설치가 될 때까지 기다려 주시길 바랍니다. 설치가 되었으면 아래의 명령어를 치고 다시 리미너로 들어가도록 해주시길 바랍니다.
+설치가 될 때까지 기다려 주시길 바랍니다. 설치가 되었으면 아래의 명령어를 치고 다시 리미너로 들어가도록 해주시길 바랍니다. *(2020년 1월 10일 추가: 만약 설치 완료 후에 실행했는 데, `/dev/sda1` clean에서 멈춘다면 버전을 낮추거나 설치 시에 영어로 설치해주시길 바랍니다.)*
 
 ```bash
 sudo qemu-system-x86_64 -hda ubuntu.img -m 'memory size(e.g. 8G)' -smp '# of core' -cpu host --enable-kvm -vnc :2
