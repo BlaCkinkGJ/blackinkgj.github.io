@@ -110,7 +110,7 @@ echo "source geometry/geometry.zsh" >> ~/.zshrc
 
 
 
-
+참고 자료
 ---
 
 [^1]: https://groups.google.com/forum/#!msg/alt.sources/tVgN49u8Ax4/7VgQlHZ4bJMJ
