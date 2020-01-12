@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Zsh] Zsh 및 oh my zsh 설치"
-date: 2019-10-2
+date: 2020-1-12
 excerpt: "Zsh 및 oh my zsh를 설치해본다."
 tag:
 - blog
