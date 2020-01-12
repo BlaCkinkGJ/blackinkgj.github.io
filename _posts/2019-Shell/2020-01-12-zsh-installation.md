@@ -101,6 +101,7 @@ Zsh 테마를 설치하고 싶은 경우에는 먼저 [사이트](https://github
 cd $HOME
 git clone https://github.com/geometry-zsh/geometry
 echo "source geometry/geometry.zsh" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## 명령어가 echo되어 나올 때
