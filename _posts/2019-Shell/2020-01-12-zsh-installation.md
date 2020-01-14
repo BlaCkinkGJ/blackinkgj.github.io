@@ -108,6 +108,26 @@ source ~/.zshrc
 
 만약 명령어가 echo되어 나온다면 `~/.zshrc`에서 주석 처리되어 있는 `DISABLE_AUTO_TILE="true"`의 주석을 해제시켜주면 됩니다.
 
+## 폰트가 깨지는 경우
+
+간혹 폰트가 깨지는 경우가 있을 수 있습니다. 이 경우에는 다음의 절차를 수행해주시길 바랍니다.[^4]
+
+```bash
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+```
+
+이렇게 설치를 한 후에 아래 그림처럼 에뮬레이터에서 [편집] → [설정] 가셔서  설정 창을 띄웁니다.
+
+![pref1](/assets/img/res/2019-Shell/zsh-error-1.png)
+
+여기서 사용자가 현재 사용하는 프로필을 클릭(체크가 되어있습니다.)하여 Text에 들어가셔서 Custom font를 클릭하고 **Ubuntu Mono deriative Powerline Regular**로 선택해주시길 바랍니다.
+
+![perf2](/assets/img/res/2019-Shell/zsh-error-2.png)
+
+
+
 
 
 
@@ -117,3 +137,4 @@ source ~/.zshrc
 [^1]: https://groups.google.com/forum/#!msg/alt.sources/tVgN49u8Ax4/7VgQlHZ4bJMJ
 [^2]: https://en.wikipedia.org/wiki/Z_shell#cite_note-6
 [^3]: https://nolboo.kim/blog/2015/08/21/oh-my-zsh/
+[^4]: http://programmingskills.net/archives/115
