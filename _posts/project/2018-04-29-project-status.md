@@ -19,7 +19,7 @@ comments: false
 * [SF(Safety First) 안전모 제작 프로젝트](https://github.com/BlaCkinkGJ/Safety-Helmet-Embedded-Device)(2018. 5. ~ 2018. 9.)
 * [STM32F107을 이용한 타겟 트래킹 프로젝트](https://github.com/BlaCkinkGJ/STM32F107-Hardware-Term)(2018. 11. ~ 2018. 12.)
 * [음악 스트리밍 클라우스 서비스 제작 프로젝트](https://github.com/BlaCkinkGJ/MusicCloud)(2019. 3. ~ 2019. 6.)
-* [STM32F107 + μCOS-Ⅲ를 기반으로 한 생체 건트롤러 프로젝트](https://github.com/BlaCkinkGJ/HandContoller)(2019. 5. ~ 2019. 6.)
+* [STM32F107 + μCOS-Ⅲ를 기반으로 한 생체 컨트롤러 제작 프로젝트](https://github.com/BlaCkinkGJ/HandContoller)(2019. 5. ~ 2019. 6.)
 * [OCF 표준 기반 건물 화재 대피 유도 시스템](https://github.com/2nd-Chance/Fire-evacuation-guidance-system-IoT)(2019. 9. ~ 2019. 11.)
 
 ## 진행 중인 프로젝트
