@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "리눅스에 커스텀 커널 설치 방법"
-date: 2020-06-29
+date: 2020-07-02
 excerpt: "커스텀 커널을 제작하고 리눅스에 설치해보도록 한다."
 tag:
 - container
