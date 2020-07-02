@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "tcmu-runner를 이용해서 Zoned Storage를 생성하고 테스트해보자."
+title: "[ZNS] tcmu-runner를 이용해서 Zoned Storage를 생성하고 테스트해보자."
 date: 2020-07-02
 excerpt: "tcmu-runner를 이용해서 Zoned Storage를 생성하고 테스트해봅시다."
 tag:
