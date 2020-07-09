@@ -71,7 +71,7 @@ sudo ./disk_on.sh zbc0 25 HM 256 10
 
 ## Zoned Storage의 제거
 
-Zoned Storage를 제거하는 코드는 `disk_off.sh`라고 명명한 후에 생성하는 코드와 같은 모드로 설정한다음 다음과 같이 적으시고, zbc가 `/dev/sda`인 경우에는 `sudo ./disk_off.sh /dev/sda`라고 치면 됩니다.
+Zoned Storage를 제거하는 코드는 `disk_off.sh`라고 명명한 후에 생성하는 코드와 같은 모드로 설정한다음 다음과 같이 적으시고, zbc가 `zbc0`이고 naa가 `naa.50014059cfa9ba75`인 경우에는 `sudo ./disk_off.sh zbc0`라고 치면 됩니다.
 
 ```bash
 #!/bin/bash
