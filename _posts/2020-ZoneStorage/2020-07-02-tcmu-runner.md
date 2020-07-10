@@ -102,7 +102,7 @@ EOF
 
 ## libzbc의 설치와 테스트
 
-zbc가 정상 작동하는 지를 확인하기 위해서 libzbc를 설치했습니다. 설치 과정은 다음과 같습니다. 먼저, 관련 패키지를 설치해주도록 합니다.
+zbc가 정상 작동하는 지를 확인하기 위해서 [libzbc](https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/)를 설치해주어야 합니다. 소스 코드를 다운받고 설치 과정은 다음과 같습니다. 먼저, 관련 패키지를 설치해주도록 합니다.
 
 ```bash
 sudo dnf install autoconf autoconf-archive automake libtool
