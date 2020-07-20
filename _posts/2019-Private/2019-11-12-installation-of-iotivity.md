@@ -43,6 +43,8 @@ env.Program('source.cpp')
 
 좀 더 자세한 내용을 알고 싶으시면 [참고 자료](https://scons.org/doc/1.0.0/HTML/scons-user/ )를 확인해주시길 바랍니다.
 
+> 추가: `scons`를 설치할 때에는 반드시 `pip install scons`를 이용해서 설치해야 합니다. 2020년 7월 20일 기준 apt에 있는 `scons`는 python2가 기반이라서 정상 동작하지 않을 수 있습니다.
+
 # IoTivity
 
 IoTivity를 빌드하기 위한 패키지를 설치하기 위해 아래의 명령어를 수행하도록 합니다.
