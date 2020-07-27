@@ -89,13 +89,13 @@ submenu 'Ubuntu용 고급 설정' $menuentry_id_option 'gnulinux-advanced-d47dbd
 여기서 먼저 `Ubuntu용 고급 설정`의 `$menuentry_id_option` 값과 원하는 커널의 `$menuentry_id_option` 값을 확인해서 `>`로 병합합니다. 예를 들어, 5.3.0-53-generic인 경우에는 아래와 같이 된다고 보면 됩니다.
 
 ```bash
-gnulinux-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e > gnulinux-5.3.0-53-generic-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e
+gnulinux-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e>gnulinux-5.3.0-53-generic-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e
 ```
 
-이 값을 잘 기억하고 `vi /etc/default/grub`을 실행해주도록 합니다. 여기서 `GRUB_DEFAULT` 부분을 아래와 같이 변경해주도록 합니다.
+이 값을 잘 기억하고 `vi /etc/default/grub`을 실행해주도록 합니다. 여기서 `GRUB_DEFAULT` 부분을 아래와 같이 변경해주도록 합니다. 유의 사항, 절대로 `>` 사이에 공백을 만드셔서는 안됩니다.
 
 ```bash
-GRUB_DEFAULT="gnulinux-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e > gnulinux-5.3.0-53-generic-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e"
+GRUB_DEFAULT="gnulinux-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e>gnulinux-5.3.0-53-generic-advanced-d47dbd0e-2b57-4064-98f6-41e8ffbd2c2e"
 GRUB_HIDDEN_TIMEOUT=0
 GRUB_HIDDEN_TIMEOUT_QUIET=true
 GRUB_TIMEOUT=0
@@ -159,7 +159,7 @@ cp /boot/config-`uname -r`* .config
 
 먼저, 우분투와 동일하게 `Makefile`에서 `EXTRAVERSION`을 원하는 이름으로 설정해주도록 합니다. 그리고 커널 컴파일은 거의 우분투와 동일하나, 약간의 단계가 좀 더 많습니다.
 
-```BASH
+```bash
 make oldconfig
 make bzImage
 make modules
