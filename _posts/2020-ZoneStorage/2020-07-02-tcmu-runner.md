@@ -73,6 +73,8 @@ sudo ./disk_on.sh zbc0 25 HM 256 10
 
 Zoned Storage를 제거하는 코드는 `disk_off.sh`라고 명명한 후에 생성하는 코드와 같은 모드로 설정한다음 다음과 같이 적으시고, zbc가 `zbc0`이고 naa가 `naa.50014059cfa9ba75`인 경우에는 `sudo ./disk_off.sh zbc0`라고 치면 됩니다.
 
+> 주의 사항: 여러 개의 Zoned Storage가 필요한 경우에는 `targetcli`에 들어가셔서 `cd /loopback`하고, `create`를 통해 **반드시 새로운 naa 넘버를 할당받아서 아래 bash에서 해당 naa로 수정해주셔야 합니다.**
+
 ```bash
 #!/bin/bash
 
