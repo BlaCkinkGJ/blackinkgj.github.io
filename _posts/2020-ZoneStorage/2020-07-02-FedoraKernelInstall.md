@@ -31,7 +31,7 @@ git clone -b v5.2 --single-branch --depth 1 https://github.com/torvalds/linux.gi
 
 ```bash
 sudo apt update && sudo apt upgrade
-sudo apt install libcurses-dev flex bison libssl-dev wget
+sudo apt install libncurses5-dev flex bison libssl-dev wget
 ```
 
 ## 설정 파일 생성
