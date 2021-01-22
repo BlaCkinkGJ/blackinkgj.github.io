@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "프로젝트 현황"
-date:   2019-12-24
+date:   2021-01-22
 project: true
 tag:
 
 - project status
 comments: false
 ---
-최종 수정 일 : 오후 10:23 2020-06-30
+최종 수정 일 : 오전 11:51 2021-01-22
 
 
 ## 종료된 프로젝트
@@ -21,11 +21,11 @@ comments: false
 * [음악 스트리밍 클라우스 서비스 제작 프로젝트](https://github.com/BlaCkinkGJ/MusicCloud)(2019. 3. ~ 2019. 6.)
 * [STM32F107 + μCOS-Ⅲ를 기반으로 한 생체 컨트롤러 제작 프로젝트](https://github.com/BlaCkinkGJ/HandContoller)(2019. 5. ~ 2019. 6.)
 * [OCF 표준 기반 건물 화재 대피 유도 시스템](https://github.com/2nd-Chance/Fire-evacuation-guidance-system-IoT)(2019. 9. ~ 2019. 11.)
+* OCSSD의 페이지-레벨 매핑 테이블 개선 프로젝트(2019. 4. ~ 2020. 7.)
+* [과제 표절 감지 제작 프로젝트](https://github.com/BlaCkinkGJ/catch-me-if-you-can)(2019. 12. ~ 2020. 7.)
+* [컨테이너 성능 측정 프로그램 제작 프로젝트](https://github.com/I-O-Benchmark-On-Container/ContainerTracer)(2020. 07. ~ 2020. 12.)
 
 ## 진행 중인 프로젝트
 
-- OCSSD의 페이지-레벨 매핑 테이블 개선 프로젝트(2019. 4. ~)
-- [ATMega128 + FreeRTOS를 기반으로 한 개발 문서 제작 프로젝트](https://github.com/BlaCkinkGJ/Atmega128-SimpleProject-FreeRTOS)(2019. 7. ~)
-- [과제 표절 감지 제작 프로젝트](https://github.com/BlaCkinkGJ/catch-me-if-you-can)(2019. 12. ~)
-- [컨테이너 성능 측정 프로그램 제작 프로젝트](https://github.com/BlaCkinkGJ/trace-replay-with-cgroup)(2020. 07. ~)
+- [ZNS를 위한 RocksDB 개발 프로젝트](https://github.com/pnu-oslab-org/rocksdb_for_zns)(2020. 12. ~ )
 
