@@ -135,7 +135,7 @@ RAID는 Redundant Array of Independent Disks의 약자입니다. 6개 레벨의 
 
 ### RAID 2(중요)
 디스크들은 서로 동기화가 되며 아주 작은 수의 줄을 가집니다. 오류를 한꺼번에 확인이 가능합니다. 많은 리던던트를 가지고 있습니다. 따라서 가격이 비싸고 사용하지 않는 용량이 있습니다.
-![RAID 2](http://ict.udlap.mx/people/carlos/is215/raid/04_01_02_files/02.gif)
+![RAID 2](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/RAID2_arch.svg/350px-RAID2_arch.svg.png)
 
 ### RAID 3
 RAID 2와 유사하나 리던던트를 하나만 두어서 해결합니다. 그래서 만약 리던던트 디스크가 고장나는 경우 좋지 못한 일이 발생할 수 있습니다.
